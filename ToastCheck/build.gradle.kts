@@ -1,4 +1,3 @@
-group = "com.example.libraries"
 plugins {
     id("com.android.library")
     id("maven-publish")
@@ -44,7 +43,7 @@ publishing {
         create<MavenPublication>("release") {
             from(components.findByName("release"))
 
-            groupId = project.group.toString() // Replaced with dynamic reference
+            groupId = "com.services.toastcheck"
             artifactId = "ToastCheck"
             version = "1.0.0"
         }
