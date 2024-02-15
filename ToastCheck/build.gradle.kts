@@ -1,3 +1,4 @@
+group = "com.services.toastcheck"
 plugins {
     id("com.android.library")
     id("maven-publish")
@@ -43,7 +44,7 @@ publishing {
         create<MavenPublication>("release") {
             from(components.findByName("release"))
 
-            groupId = "com.services.toastcheck"
+            groupId = project.group.toString() // Replaced with dynamic reference
             artifactId = "ToastCheck"
             version = "1.0.0"
         }
