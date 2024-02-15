@@ -45,10 +45,11 @@ afterEvaluate {
 
                 groupId = "com.services.toastcheck"
                 artifactId = "ToastCheck"
-                version = "1.0.3"
+                version = "1.0.0"
             }
         }
         repositories {
+            mavenLocal()
             maven {
                 url = uri("https://jitpack.io")
             }
