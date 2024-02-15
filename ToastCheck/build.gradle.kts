@@ -1,4 +1,4 @@
-group = "com.services.toastcheck"
+group = "com.github.vkskumar15"
 plugins {
     id("com.android.library")
     id("maven-publish")
@@ -10,7 +10,6 @@ android {
 
     defaultConfig {
         minSdk = 28
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
     }
