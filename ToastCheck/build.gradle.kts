@@ -37,25 +37,21 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }
 
-afterEvaluate {
-    publishing {
-        publications {
-            create<MavenPublication>("release") {
-                from(components.findByName("release"))
+// Define publishing outside the android block
+publishing {
+    publications {
+        create<MavenPublication>("release") {
+            from(components.findByName("release"))
 
-                groupId = "com.services.toastcheck"
-                artifactId = "ToastCheck"
-                version = "1.0.0"
-            }
+            groupId = "com.services.toastcheck"
+            artifactId = "ToastCheck"
+            version = "1.0.0"
         }
-        repositories {
-            mavenLocal()
-            maven {
-                url = uri("https://jitpack.io")
-            }
+    }
+    repositories {
+        mavenLocal()
+        maven {
+            url = uri("https://jitpack.io")
         }
     }
 }
-
-
-
