@@ -44,8 +44,8 @@ afterEvaluate {
                 from(components.findByName("release"))
 
                 groupId = "com.services.toastcheck"
-                artifactId = "your-library"
-                version = "1.0.0"
+                artifactId = "ToastCheck"
+                version = "1.0.3"
             }
         }
         repositories {
